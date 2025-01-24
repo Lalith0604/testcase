@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="static/clawslogo.jpg" alt="">
+        </div>
+        <ul id="menuList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Aboutus.html">About</a></li>
+            <li><a href="Apponiment.html">Services</a></li>
+            <li><a href="Apponiment.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <main>
+        <!--about img-->
+        <div class="detail">
+            <div class="box">
+                <div class="text-box">
+                    <h2 class="high">claws & happines world</h2>
+                    <p class="p1">A dog’s owner knows their pet’s personality, and to avoid a tragedy, children must
+                        learn to
+                        ask permission before petting an unfamiliar dog—no matter how cute and cuddly.A dog’s owner
+                        knows their
+                        pet’s personality, and to avoid a tragedy, children must learn to ask permission before petting
+                        an
+                        unfamiliar dog—no matter how cute and cuddly.</p>
+                </div>
+                <div class="img-box">
+                    <img src="static/img4.jpg">
+                </div>
+            </div>
+
+        </div>
+        <!--Doctor information-->
+        <div class="doctorInfo">
+
+            <img src="static/doctorpic.png" height="250px" width="25%">
+
+            <Strong>Dr. M S Krishnakanth</Strong>
+            <p class="p2">Dr. M S Krishnakanth is a Veterinary Physician in Banjara Hills, Hyderabad and has an
+                experience of 21 years in this field. Dr. M S Krishnakanth practices at Claws & Paws in Banjara Hills,
+                Hyderabad and Claws and Paws Pet Clinic in Madhapur, Hyderabad. He completed Bachelor in Veterinary
+                Science and Animal Husbandary (BVSc & AH) from College of Veterinary Science, Rajendranagar, SVVU in
+                2004. He is a member of FSPAI and Pet Practitioners Association of Twin Cities. Some of the services
+                provided by the doctor are: Services for Birds,Treatments for Birds,Veterinary Dental
+                Prophylaxis,Veterinary Chiropractic and Neurosurgery in Dogs and Cats etc.</p>
+
+        </div>
+        <!--appointment-->
+        <div class="container">
+            <h1>Submit Your Details</h1>
+            <form id="detailsForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <button type="submit">Submit</button>
+            </form>
+
+
+        </div>
+        <!--Infrastructure-->
+        <div class="infra">
+            <h1>service</h1>
+            <div class="svr"><img src="static/dog.jpg">
+                <h2>dog</h2>
+            </div>
+            <div class="svr"><img src="static/bird.jpg">
+                <h2>Bird</h2>
+            </div>
+            <div class="svr"><img src="static/dolpin.jpg">
+                <h2>Fish</h2>
+            </div>
+            <div class="svr"><img src="static/cat.jpg">
+                <h2>Cat</h2>
+            </div>
+        </div>
+        <!--faq-->
+        <div class="whole">
+            <h1>FAQ</h1>
+            <div class="faq">
+                <button class="anotation">
+                    How much does the fee cost?
+                    <i class="sol-id">&#x25BC;</i>
+                </button>
+                <div class="pannal">
+                    <p>The cost of our clinic is lower compared to others.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="anotation">
+                    What are your working hours?
+                    <i class="sol-id">&#x25BC;</i>
+                </button>
+                <div class="pannal">
+                    <p>We are open from 8:00 AM to 8:00 PM every day except Sundays.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="anotation">
+                    How much does the fee cost?
+                    <i class="sol-id">&#x25BC;</i>
+                </button>
+                <div class="pannal">
+                    <p>The cost of our clinic is lower compared to others.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="anotation">
+                    How much does the fee cost?
+                    <i class="sol-id">&#x25BC;</i>
+                </button>
+                <div class="pannal">
+                    <p>The cost of our clinic is lower compared to others.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div>Aboutus
+            <a href="Admin.html">Admin page</a>
+            <br>
+            <p>We provid both services:
+                <br>
+                health checkups
+                <br>
+                Grooming
+            </p>
+        </div>
+        <div>Contact
+            <ul>
+                <li>Email: clawshappiness@gmail.com</li>
+                <li>Phone no:+91 7676805023</li>
+            </ul>
+        </div>
+        <div>location
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15227.707416705383!2d78.4389101!3d17.4152976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9726411a516d%3A0x4266b8156bcdc6c4!2sClaws%20%26%20Paws%20Pet%20Clinic%20and%20Surgical%20Center!5e0!3m2!1sen!2sin!4v1736932323082!5m2!1sen!2sin"
+                width="90%" height="80%" style="border: 2px solid black;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

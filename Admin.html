@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Admin Page</h1>
+
+    <div>
+        <label for="filterDate">Select Date:</label>
+        <input type="date" id="filterDate">
+        <button onclick="filterByDate()">Search</button>
+    </div>
+
+    <table id="detailsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Fetch data and populate table
+        function filterByDate() {
+    const filterDate = document.getElementById('filterDate').value;
+
+    if (!filterDate) {
+        alert("Please select a date!");
+        return;
+    }
+
+    fetch(`/data?date=${filterDate}`)
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.querySelector('#detailsTable tbody');
+            tbody.innerHTML = ''; // Clear the table
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4">No records found for this date</td></tr>';
+                return;
+            }
+
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${row.name}</td>
+                    <td>${row.phone}</td>
+                    <td>${row.date}</td>
+                    <td>${row.time}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(err => console.error("Error fetching data:", err));
+}
+
+        // Call fetchData on page load
+        fetchData();
+    </script>
+</body>
+</html>
